@@ -1,0 +1,667 @@
+/* External stylesheet for AerisAg portfolio website */
+/* Author: Simon Smith */
+/* Purpose: Shared styling for Assessment 4 pages */
+
+/* Universal reset */
+/* Removes default browser spacing and makes layout sizing easier to control */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes padding and border in total element width */
+}
+
+/* General page styles */
+/* Sets the main background, font and text appearance for the whole website */
+body {
+    background: linear-gradient(to bottom, #edf3ea, #f7faf5); /* Soft green page background */
+    color: #1f2a1f; /* Main dark text colour */
+    font-family: Arial, Helvetica, "Trebuchet MS", sans-serif; /* Website font stack */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Header */
+/* Styles the top banner area used across the website */
+.site-header {
+    background: linear-gradient(135deg, #275f38, #3d7b4a); /* Green branded gradient */
+    color: #ffffff; /* White header text */
+    padding: 20px 0; /* Vertical header spacing */
+    border-bottom: 4px solid #dce9d5; /* Light border below header */
+}
+
+/* Header layout */
+/* Controls the positioning of the logo, title and navigation area */
+.top-bar {
+    max-width: 1100px; /* Matches main content width */
+    margin: 0 auto; /* Centres the header content */
+    padding: 0 40px; /* Adds side spacing */
+    display: flex; /* Places header items beside each other */
+    align-items: center; /* Vertically aligns items */
+    justify-content: space-between; /* Separates branding and navigation */
+    gap: 20px; /* Space between header items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Logo and page title group */
+/* Holds the AerisAg logo and header text together */
+.brand-wrap {
+    display: flex; /* Places logo and text side by side */
+    align-items: center; /* Aligns logo and text vertically */
+    gap: 20px; /* Space between logo and text */
+    flex-wrap: wrap; /* Allows logo/text to wrap on smaller screens */
+}
+
+/* Logo link */
+/* Removes default link styling from the clickable logo */
+.brand-wrap a {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Keeps logo link as a block-like element */
+}
+
+/* Logo hover effect */
+/* Gives small visual feedback when the logo is hovered over */
+.brand-wrap a:hover .logo {
+    opacity: 0.9; /* Slightly fades logo on hover */
+}
+
+/* Logo */
+/* Controls the size and presentation of the AerisAg logo */
+.logo {
+    width: 180px; /* Sets logo width */
+    height: auto; /* Maintains logo proportions */
+    display: block; /* Removes unwanted image spacing */
+    background: radial-gradient(circle, #ffffff 55%, #eef7ea 100%); /* Light background behind logo */
+    padding: 1px 5px; /* Small internal spacing around logo */
+    border-radius: 8px; /* Rounded logo background */
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08),
+                0 0 20px rgba(146, 193, 139, 0.40); /* Soft logo glow */
+}
+
+/* Header main heading */
+/* Styles the main AerisAg heading in the header */
+.brand-text h1 {
+    color: #ffffff; /* White heading text */
+    font-size: 2.2em; /* Large heading size */
+    line-height: 1.1; /* Tight heading line spacing */
+    margin-bottom: 6px; /* Space below heading */
+}
+
+/* Header subtitle */
+/* Styles the short descriptive text below the main heading */
+.brand-text p {
+    color: #f1f7ef; /* Light subtitle colour */
+    font-size: 1.05em; /* Slightly larger subtitle text */
+}
+
+/* Highlighted homepage tagline */
+/* Used to emphasise the AerisAg slogan or key message in the header area */
+.tagline-highlight {
+    font-weight: bold; /* Makes the tagline stand out */
+    color: #f1f7ef; /* Pale colour for contrast on green header */
+}
+
+/* Navigation bar */
+/* Controls the overall navigation area that contains the page links */
+.navbar {
+    background: transparent; /* Allows header gradient to show behind navigation */
+    text-align: right; /* Aligns navigation buttons to the right */
+}
+
+/* Navigation links */
+/* Turns normal page links into button-style navigation items */
+.navbar a {
+    display: inline-block; /* Makes links behave like buttons */
+    background-color: rgba(255, 255, 255, 0.16); /* Transparent white button background */
+    color: #ffffff; /* White navigation text */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes navigation text stronger */
+    padding: 12px 22px; /* Button spacing */
+    margin-left: 10px; /* Space between buttons */
+    margin-bottom: 8px; /* Space when buttons wrap */
+    border-radius: 8px; /* Rounded button corners */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth hover animation */
+}
+
+/* Navigation hover effect */
+/* Changes navigation buttons when the user moves the mouse over them */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.28); /* Lighter hover background */
+    transform: translateY(-1px); /* Slight lift effect */
+    text-decoration: none; /* Keeps button without underline */
+}
+
+/* Main content area */
+/* Controls the maximum width and spacing of the central page content */
+main {
+    max-width: 1200px; /* Limits content width on large screens */
+    margin: 0 auto; /* Centres main content */
+    padding: 30px 0 20px 0; /* Adds top and bottom spacing */
+}
+
+/* Homepage hero panel */
+/* Adds spacing around the homepage hero image area */
+.hero-panel {
+    padding: 5px 20px 0 20px; /* Hero panel spacing */
+}
+
+/* Hero banner */
+/* Holds the main homepage image and overlay text */
+.hero-banner {
+    position: relative; /* Allows overlay text to sit on top of image */
+    max-width: 1100px; /* Matches content box width */
+    margin: 0 auto 30px auto; /* Centres banner and adds bottom space */
+    border-radius: 18px; /* Rounded banner corners */
+    overflow: hidden; /* Keeps image inside rounded corners */
+    box-shadow: 0 10px 24px rgba(33, 79, 53, 0.14); /* Soft shadow */
+}
+
+/* Hero banner image */
+/* Controls the size and cropping of the main homepage image */
+.hero-banner img {
+    display: block; /* Removes default image gap */
+    width: 100%; /* Makes image fill banner width */
+    height: 430px; /* Sets hero image height */
+    object-fit: cover; /* Crops image neatly without stretching */
+}
+
+/* Hero overlay */
+/* Places a text box over the hero image */
+.hero-overlay {
+    position: absolute; /* Positions overlay on top of image */
+    top: 72%; /* Moves overlay lower on image */
+    left: 20px; /* Adds space from left edge */
+    transform: translateY(-50%); /* Centres overlay vertically around its position */
+    background-color: rgba(255, 255, 255, 0.86); /* Light transparent background */
+    padding: 18px 22px; /* Inner overlay spacing */
+    border-radius: 14px; /* Rounded overlay corners */
+    max-width: 300px; /* Controls overlay width */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Subtle overlay shadow */
+}
+
+/* Hero overlay heading */
+/* Styles the heading inside the hero image text box */
+.hero-overlay h2 {
+    font-size: 1.5em; /* Overlay heading size */
+    color: #154f34; /* Dark green heading */
+    margin-bottom: 5px; /* Space below heading */
+}
+
+/* Hero overlay paragraph */
+/* Styles the descriptive text inside the hero image text box */
+.hero-overlay p {
+    font-size: 1em; /* Overlay paragraph size */
+    color: #2f6b42; /* Green paragraph text */
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Hero button */
+/* Turns the homepage call-to-action link into a button */
+.hero-button {
+    display: inline-block; /* Makes link behave like a button */
+    margin-top: 10px; /* Space above button */
+    padding: 8px 18px; /* Button padding */
+    background-color: #2f6b42; /* Green button background */
+    color: #ffffff; /* White button text */
+    text-decoration: none; /* Removes underline */
+    border-radius: 10px; /* Rounded button corners */
+    font-weight: bold; /* Bold button text */
+}
+
+/* Hero button hover */
+/* Changes the button colour when the user hovers over it */
+.hero-button:hover {
+    background-color: #245535; /* Darker green on hover */
+    text-decoration: none; /* Keeps button without underline */
+}
+
+/* Main content boxes */
+/* Styles the main white content panels used throughout the website */
+.content-box,
+.features-section {
+    background-color: #ffffff; /* White box background */
+    max-width: 1100px; /* Matches page content width */
+    margin: 30px auto; /* Centres box with vertical spacing */
+    padding: 42px 36px; /* Inner box spacing */
+    border-left: 6px solid #2f6b42; /* Green accent line */
+    border-radius: 18px; /* Rounded corners */
+    box-shadow: 0 8px 24px rgba(33, 79, 53, 0.10); /* Soft shadow */
+}
+
+/* Homepage services section heading */
+/* Centres the heading in the homepage feature section */
+.features-section h2 {
+    text-align: center; /* Centres heading text */
+}
+
+/* Main section headings */
+/* Styles all h2 headings used for major page sections */
+h2 {
+    font-size: 2em; /* Large heading size */
+    color: #154f34; /* Dark green heading colour */
+    margin-bottom: 18px; /* Space below heading */
+}
+
+/* Decorative heading underline */
+/* Adds a small green line under content-box and feature-section headings */
+.content-box h2::after,
+.features-section h2::after {
+    content: ""; /* Creates decorative element */
+    display: block; /* Allows size to be applied */
+    width: 65px; /* Line width */
+    height: 4px; /* Line thickness */
+    background-color: #88b07f; /* Light green line */
+    border-radius: 2px; /* Rounded line edges */
+    margin-top: 10px; /* Space above line */
+}
+
+/* Centred decorative heading underline */
+/* Centres the decorative line under feature-section headings */
+.features-section h2::after {
+    margin-left: auto; /* Centres line */
+    margin-right: auto; /* Centres line */
+}
+
+/* Subheadings */
+/* Styles h3 headings used inside cards and smaller sections */
+h3 {
+    font-size: 1.2em; /* Subheading size */
+    color: #245f3e; /* Green subheading colour */
+    margin-bottom: 10px; /* Space below subheading */
+}
+
+/* Paragraph text */
+/* Controls standard paragraph width, size and colour */
+p {
+    max-width: 850px; /* Keeps paragraph lines readable */
+    font-size: 1.1em; /* Slightly larger text */
+    color: #2f2f2f; /* Dark grey text */
+    margin-bottom: 16px; /* Space below paragraphs */
+}
+
+/* Lists */
+/* Styles unordered and ordered lists so they match paragraph text */
+ul,
+ol {
+    max-width: 850px; /* Matches paragraph width */
+    font-size: 1.1em; /* Matches paragraph size */
+    color: #2f2f2f; /* Dark grey list text */
+    margin-left: 25px; /* Indents list */
+    margin-bottom: 12px; /* Space below list */
+}
+
+/* List items */
+/* Adds spacing between individual list points */
+li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+/* General links */
+/* Sets the default link colour used across the website */
+a {
+    color: #1f5a3a; /* Green link colour */
+}
+
+/* General link hover */
+/* Underlines links when the user hovers over them */
+a:hover {
+    text-decoration: underline; /* Hover underline */
+}
+
+/* Highlighted inline text */
+/* Makes selected words or phrases stand out inside normal text */
+.highlight {
+    font-weight: bold; /* Bold highlight text */
+    color: #1f5a3a; /* Green highlight colour */
+}
+
+/* Homepage feature grid */
+/* Controls the layout of feature cards on the homepage */
+.feature-grid {
+    display: flex; /* Uses flexible layout */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allows cards to wrap to next row */
+    justify-content: center; /* Centres cards */
+}
+
+/* Homepage feature cards */
+/* Styles the individual service or feature cards */
+.feature-card {
+    flex: 1 1 250px; /* Allows cards to grow, shrink and start around 250px */
+    background-color: #f2f8ef; /* Light green card background */
+    padding: 20px; /* Inner card spacing */
+    box-shadow: 0 8px 24px rgba(33, 79, 53, 0.10); /* Soft card shadow */
+    margin-bottom: 15px; /* Space below cards */
+    border: 2px solid #d6e2d1; /* Light border */
+    border-left: 6px solid #2f6b42; /* Green accent line */
+    border-radius: 14px; /* Rounded card corners */
+    text-align: left; /* Left-aligns card text */
+}
+
+/* Reusable card grid */
+/* Creates a two-column grid for information cards */
+.card-grid {
+    display: grid; /* Uses CSS grid */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 15px; /* Space above grid */
+}
+
+/* Reusable information card */
+/* Styles smaller information cards used inside content sections */
+.info-card {
+    background-color: #f1f7f1; /* Light green card background */
+    border-left: 5px solid #2f6b42; /* Green accent line */
+    border-radius: 10px; /* Rounded corners */
+    padding: 18px; /* Inner card spacing */
+}
+
+/* Information card paragraph */
+/* Adjusts paragraph spacing inside information cards */
+.info-card p {
+    font-size: 1em; /* Slightly smaller card text */
+    margin-bottom: 0; /* Removes extra bottom space */
+}
+
+/* Two-column list */
+/* Splits longer lists into two columns on wider screens */
+.two-column-list {
+    columns: 2; /* Creates two list columns */
+    column-gap: 40px; /* Space between columns */
+}
+
+/* Reflection box */
+/* Gives reflection content a slightly different background */
+.reflection-box {
+    background-color: #f1f7f1; /* Light green background */
+}
+
+/* Image figure box */
+/* Styles image and caption figures placed between content sections */
+.image-box {
+    max-width: 1050px; /* Keeps figure close to content width */
+    margin: 25px auto; /* Centres figure with vertical spacing */
+    padding: 18px; /* Inner spacing */
+    background-color: #eef5ee; /* Light green figure background */
+    border: 1px solid #b7cbb8; /* Light green border */
+    border-radius: 12px; /* Rounded figure box corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    text-align: center; /* Centres image and caption */
+}
+
+/* Image inside figure box */
+/* Makes figure images responsive and keeps them inside the box */
+.image-box img {
+    width: 100%; /* Makes image fill figure width */
+    height: auto; /* Keeps image proportions correct */
+    border-radius: 8px; /* Rounded image corners */
+}
+
+/* Figure caption */
+/* Styles captions below website images and diagrams */
+.image-box figcaption {
+    margin-top: 10px; /* Space above caption */
+    font-size: 0.95em; /* Slightly smaller caption text */
+    font-style: italic; /* Italic caption style */
+    color: #355c3a; /* Green caption text */
+}
+
+/* Smaller image box */
+/* Narrows tall workflow diagrams so they do not dominate the page */
+.small-image-box {
+    max-width: 650px; /* Smaller maximum width */
+}
+
+/* Smaller image box image */
+/* Controls tall workflow images inside the smaller figure box */
+.small-image-box img {
+    max-height: 650px; /* Limits image height */
+    width: auto; /* Keeps natural image width */
+    max-width: 100%; /* Prevents image overflow */
+}
+
+/* Tables */
+/* Styles tables used for structured information or validation evidence */
+table {
+    width: 100%; /* Full container width */
+    border-collapse: collapse; /* Joins cell borders together */
+    margin-top: 15px; /* Space above table */
+}
+
+/* Table cells */
+/* Adds borders and spacing to table headers and cells */
+th,
+td {
+    border: 1px solid #b7cbb8; /* Light green border */
+    padding: 12px; /* Cell spacing */
+    text-align: left; /* Left-aligns table text */
+    vertical-align: top; /* Aligns content to top of cells */
+}
+
+/* Table headings */
+/* Styles the header row of tables */
+th {
+    background-color: #dfe8da; /* Light green header background */
+    color: #1f5a3a; /* Green header text */
+}
+
+/* Images inside tables */
+/* Keeps validation or example images responsive inside tables */
+table img {
+    width: 100%; /* Responsive table image */
+    max-width: 600px; /* Stops image becoming too wide */
+    height: auto; /* Keeps image proportions */
+    border-radius: 6px; /* Rounded image corners */
+}
+
+/* Newsletter signup form */
+/* Controls the overall size and spacing of the newsletter form */
+.newsletter-form {
+    max-width: 850px; /* Keeps form readable */
+    margin-top: 20px; /* Space above form */
+}
+
+/* Form fieldset */
+/* Groups related form questions into bordered sections */
+.newsletter-form fieldset {
+    border: 1px solid #b7cbb8; /* Light green border */
+    border-radius: 10px; /* Rounded fieldset corners */
+    padding: 20px; /* Inner fieldset spacing */
+    margin-bottom: 20px; /* Space between fieldsets */
+    background-color: #f8fbf7; /* Light form background */
+}
+
+/* Form legend */
+/* Styles the title text for each fieldset */
+.newsletter-form legend {
+    font-weight: bold; /* Bold fieldset title */
+    color: #154f34; /* Dark green legend text */
+    padding: 0 8px; /* Space around legend */
+}
+
+/* Form labels */
+/* Places form labels clearly above each input */
+.newsletter-form label {
+    display: block; /* Puts label on its own line */
+    margin-top: 12px; /* Space above label */
+    font-weight: bold; /* Bold label text */
+    color: #2f2f2f; /* Dark label colour */
+}
+
+/* Text inputs and textarea */
+/* Styles the main text entry areas in the newsletter form */
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"],
+.newsletter-form textarea {
+    width: 100%; /* Makes input responsive */
+    max-width: 600px; /* Limits input width */
+    padding: 10px; /* Inner input spacing */
+    margin-top: 5px; /* Space between label and input */
+    border: 1px solid #b7cbb8; /* Light green input border */
+    border-radius: 6px; /* Rounded input corners */
+    font-family: Arial, Helvetica, "Trebuchet MS", sans-serif; /* Matches website font */
+    font-size: 1em; /* Readable input text size */
+}
+
+/* Radio buttons and checkboxes */
+/* Adds spacing between selection controls and their text */
+.newsletter-form input[type="radio"],
+.newsletter-form input[type="checkbox"] {
+    margin-right: 8px; /* Space after control */
+}
+
+/* Form button area */
+/* Adds spacing above the submit and reset buttons */
+.form-buttons {
+    margin-top: 15px; /* Space above buttons */
+}
+
+/* Form buttons */
+/* Styles submit and reset buttons */
+.form-buttons input {
+    background-color: #2f6b42; /* Green button background */
+    color: #ffffff; /* White button text */
+    border: none; /* Removes default border */
+    padding: 12px 22px; /* Button padding */
+    margin-right: 10px; /* Space between buttons */
+    margin-bottom: 10px; /* Space when buttons wrap */
+    border-radius: 8px; /* Rounded button corners */
+    font-weight: bold; /* Bold button text */
+    cursor: pointer; /* Shows clickable pointer */
+}
+
+/* Form button hover */
+/* Darkens form buttons when the user hovers over them */
+.form-buttons input:hover {
+    background-color: #245535; /* Dark green hover colour */
+}
+
+/* Footer */
+/* Styles the bottom section of the website */
+footer {
+    background-color: #7eaf73; /* Green footer background */
+    text-align: center; /* Centres footer text */
+    padding: 18px; /* Footer spacing */
+    margin-top: 5px; /* Small space above footer */
+    font-size: 0.95em; /* Slightly smaller footer text */
+}
+
+/* Footer paragraph */
+/* Keeps footer text centred and aligned with page width */
+footer p {
+    max-width: 1100px; /* Matches content width */
+    margin: 8px auto; /* Centres footer paragraph */
+    text-align: center; /* Centres text */
+}
+
+/* Responsive layout for tablets */
+/* Adjusts spacing and layout for screens up to 1024px wide */
+@media screen and (max-width: 1024px) {
+    .top-bar {
+        padding: 0 20px; /* Reduces header side spacing */
+    }
+
+    .navbar {
+        text-align: left; /* Moves navigation left when wrapping */
+    }
+
+    .navbar a {
+        padding: 10px 14px; /* Smaller navigation buttons */
+        margin-left: 0; /* Removes left margin */
+        margin-right: 6px; /* Adds space between buttons */
+    }
+
+    main {
+        padding: 20px 15px; /* Adds side padding to main content */
+    }
+
+    .hero-banner img {
+        height: 350px; /* Reduces hero image height */
+    }
+
+    .content-box,
+    .features-section {
+        padding: 30px 24px; /* Reduces content box padding */
+    }
+}
+
+/* Responsive layout for mobile */
+/* Changes multi-column and overlay layouts for smaller screens */
+@media screen and (max-width: 800px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* Changes cards to one column */
+    }
+
+    .two-column-list {
+        columns: 1; /* Changes lists to one column */
+    }
+
+    .hero-overlay {
+        position: static; /* Moves overlay below image */
+        transform: none; /* Removes positioning adjustment */
+        max-width: none; /* Allows overlay to fill width */
+        border-radius: 0; /* Removes rounded corners on mobile overlay */
+    }
+
+    .hero-banner img {
+        height: 280px; /* Smaller hero image height */
+    }
+}
+
+/* Print-friendly layout */
+/* Simplifies the website so it prints clearly on paper */
+@media print {
+    body {
+        background: #ffffff; /* White print background */
+        color: #000000; /* Black print text */
+        font-size: 11pt; /* Print text size */
+    }
+
+    h1 {
+        font-size: 18pt; /* Print heading size */
+    }
+
+    h2 {
+        font-size: 14pt; /* Print section heading size */
+    }
+
+    h3 {
+        font-size: 12pt; /* Print subheading size */
+    }
+
+    p,
+    li {
+        font-size: 11pt; /* Print paragraph/list size */
+    }
+
+    .navbar,
+    .hero-panel,
+    footer {
+        display: none; /* Hides navigation, hero image and footer in print */
+    }
+
+    .site-header,
+    .content-box,
+    .features-section,
+    .feature-card,
+    .info-card,
+    .image-box,
+    .newsletter-form,
+    main,
+    section {
+        background: #ffffff; /* Removes coloured backgrounds */
+        color: #000000; /* Uses black text */
+        border: none; /* Removes borders */
+        box-shadow: none; /* Removes shadows */
+        margin: 0 0 12px 0; /* Simple print spacing */
+        padding: 0; /* Removes extra screen padding */
+    }
+
+    a {
+        color: #000000; /* Black printed links */
+        text-decoration: underline; /* Keeps links identifiable */
+    }
+
+    img {
+        max-width: 100%; /* Prevents image overflow when printed */
+        height: auto; /* Keeps image proportions */
+    }
+}

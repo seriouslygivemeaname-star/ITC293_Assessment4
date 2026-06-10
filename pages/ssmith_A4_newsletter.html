@@ -1,0 +1,179 @@
+<!DOCTYPE html>		<!-- define the document as HTML5 -->
+<html lang="en">	<!-- Sets language as English -->
+<head>
+    <!-- Newsletter signup page for the AerisAg portfolio website
+    Author: Simon Smith
+    Date: June 2026
+    Purpose: Allows users to sign up for the AerisAg email newsletter using an HTML5 form and JavaScript validation -->
+    
+    <meta charset="UTF-8">	<!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	<!-- Makes the page responsive on different screen sizes -->
+    <title>AerisAg | Newsletter Signup</title>
+    <link rel="stylesheet" href="../css/portfolio.css" type="text/css">	<!-- Links to the external CSS stylesheet -->
+    <script src="../javascript/newsletter.js" defer></script>	<!-- Links to the external JavaScript file -->
+    <link rel="icon" type="image/png" href="../images/logo.png">	<!-- Favicon for browser tab -->
+</head>
+    
+<body onload="showWelcomeMessage()">	<!-- body section contains all visible content of the webpage -->
+    
+  <header class="site-header">
+    <div class="top-bar">	<!-- Used to align logo, heading and navigation -->
+      <div class="brand-wrap">	<!-- Groups the logo and page title -->
+        <a href="../index.html">	<!-- Makes the logo a clickable link back to the homepage -->
+          <img src="../images/logo.png" alt="AerisAg logo" class="logo"> <!-- Displays logo -->
+        </a>
+    
+        <div class="brand-text">	<!-- Holds the page heading and subtitle -->
+          <h1>Newsletter Signup</h1>	<!-- Main heading -->
+          <p>AerisAg email subscription form</p>	<!-- Short description -->
+        </div>
+      </div>
+    
+      <nav class="navbar"> <!-- Navigation bar for all included pages -->
+          <a href="../index.html">Home</a>
+          <a href="ssmith_A4_about.html">About</a>
+          <a href="ssmith_A4_resume.html">Resume</a>
+          <a href="ssmith_A4_web_skills.html">Web Skills</a>
+          <a href="ssmith_A4_drones.html">Drone Technology</a>
+          <a href="ssmith_A4_gismapping.html">GIS Mapping</a>
+          <a href="ssmith_A4_landmanagement.html">Land Management</a>
+      </nav>
+    </div>
+  </header>
+    
+  <main>
+    <section class="content-box">	<!-- Section styled using the shared content-box layout -->
+      <h2>AerisAg Newsletter Signup</h2>	<!-- Section heading -->
+      <p>
+        Use this form to sign up for the AerisAg newsletter. The newsletter will provide updates about
+        drone mapping, GIS analysis, vegetation monitoring, land management and new AerisAg services.
+      </p>
+    
+      <p>
+         Required data: First Name, Last Name  and Email Address must be completed before the form can be submitted.
+      </p>
+    </section>
+    
+    <section class="content-box">	<!-- Form section styled using the shared content-box layout -->
+      <h2>Signup Form</h2>	<!-- Section heading -->
+    
+     <!--
+      This form uses the post method as required by Assessment 4.
+      The action value is a placeholder because this isnt a real company form.
+      JavaScript validation checks that both name fields and email are not empty.
+      -->
+      <form id="newsletterForm"
+            class="newsletter-form"
+            action="process_newsletter.php"
+            method="post"
+            onsubmit="return validateNewsletterForm();">
+    
+          <fieldset>
+            <legend>Personal Details</legend>
+          
+            <label for="firstName">First Name *</label>
+            <input type="text"
+                    id="firstName"
+                    name="firstName"
+                    maxlength="60">
+            
+            <label for="lastName">Last Name *</label>
+            <input type="text"
+                      id="lastName"
+                      name="lastName"
+                      maxlength="60">
+            
+            <label for="emailAddress">Email Address *</label>
+            <input type="email"
+                    id="emailAddress"
+                    name="emailAddress"
+                    maxlength="60">
+          </fieldset>
+          
+          <fieldset>
+            <legend>Age Range</legend>
+            
+            <p>Please select your age range:</p>
+            
+            <label>
+              <input type="radio" name="ageRange" value="15-25">
+              15-25
+            </label>
+            
+            <label>
+              <input type="radio" name="ageRange" value="26-35">
+              26-35
+            </label>
+            
+            <label>
+              <input type="radio" name="ageRange" value="36-45">
+              36-45
+            </label>
+            
+            <label>
+              <input type="radio" name="ageRange" value="46-55">
+              46-55
+            </label>
+            
+            <label>
+              <input type="radio" name="ageRange" value="55+">
+              55+
+            </label>
+          </fieldset>
+            
+          <fieldset>
+            <legend>AerisAg Services of Interest</legend>
+            
+            <p>Select any AerisAg services that interest you:</p>
+            
+            <label>
+              <input type="checkbox" name="services" value="dronePropertyMapping">
+              Drone property mapping
+            </label>
+            
+            <label>
+              <input type="checkbox" name="services" value="weedDetection">
+              Weed detection and monitoring
+            </label>
+            
+            <label>
+              <input type="checkbox" name="services" value="vegetationMonitoring">
+              Vegetation monitoring
+            </label>
+            
+            <label>
+              <input type="checkbox" name="services" value="mosquitoHabitatMapping">
+              Mosquito habitat mapping
+            </label>
+            
+            <label>
+            <input type="checkbox" name="services" value="gisReporting">
+            GIS reporting and site analysis
+          </label>
+        </fieldset>
+    
+        <fieldset>
+          <legend>Additional Information</legend>
+        
+          <label for="comments">Comments or questions</label>
+          <textarea id="comments"
+                  name="comments"
+                  cols="60"
+                  rows="3"></textarea>
+        </fieldset>
+    
+        <div class="form-buttons">
+          <input type="submit" value="Submit Signup">
+          <input type="reset" value="Reset Form">
+        </div>
+      </form>
+    </section>
+  </main>	<!-- End of the main page content -->
+    
+  <footer>	<!-- Footer contains copyright and contact details -->
+    <p>Contact: <a href="mailto:simon.smith21@hotmail.com">simon.smith21@hotmail.com</a> | <a href="tel:+610423964127">0423 964 127</a></p>
+    <p>&copy; 2026 Simon Smith / AerisAg. All original content on this website is owned by the author or used with permission.</p>
+  </footer>
+    
+</body>
+</html>

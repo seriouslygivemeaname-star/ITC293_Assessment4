@@ -1,0 +1,225 @@
+<!DOCTYPE html>			<!-- define the document as HTML5 -->
+<html lang="en">	<!-- Sets language as English -->
+<head>
+    <!-- Web Skills page for the AerisAg portfolio website
+    Author: Simon Smith
+    Date: June 2026
+    Purpose: Describes HTML, CSS and JavaScript skills used in the Assessment 4 portfolio website -->
+	
+    <meta charset="UTF-8">	<!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	<!-- Makes the page responsive on different screen sizes -->
+    <title>AerisAg | Web Skills</title>
+    <link rel="stylesheet" href="../css/portfolio.css" type="text/css">	<!-- Links to the external CSS stylesheet -->
+    <link rel="icon" type="image/png" href="../images/logo.png">	<!-- Favicon for browser tab -->
+</head>
+
+<body>	<!-- body section contains all visible content of the webpage -->
+
+    <header class="site-header">
+        <div class="top-bar">	<!-- Used to align logo/heading and navigation -->
+            <div class="brand-wrap">	<!-- Groups the logo and page title -->
+                <a href="../index.html">	<!-- Makes the logo a clickable link back to the homepage -->
+                    <img src="../images/logo.png" alt="AerisAg logo" class="logo"> <!-- Displays logo -->
+                </a>
+				
+                <div class="brand-text">	<!-- Holds the page heading and subtitle -->
+                    <h1>Web Skills</h1>	<!-- Main heading -->
+                    <p>HTML, CSS and JavaScript implementation</p>	<!-- Short description -->
+                </div>
+            </div>
+
+            <nav class="navbar"> <!-- Navigation bar for all included pages -->
+                <a href="../index.html">Home</a>
+                <a href="ssmith_A4_about.html">About</a>
+                <a href="ssmith_A4_resume.html">Resume</a>
+                <a href="ssmith_A4_web_skills.html">Web Skills</a>
+                <a href="ssmith_A4_drones.html">Drone Technology</a>
+                <a href="ssmith_A4_gismapping.html">GIS Mapping</a>
+                <a href="ssmith_A4_landmanagement.html">Land Management</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-box">	<!-- Introduction to web development skills -->
+            <h2>Introduction to Web Skills</h2>	<!-- Section heading -->
+
+            <p>
+                This page explains the web development skills used to create the Assessment 4 AerisAg portfolio
+                website. The site demonstrates HTML5 structure, external CSS styling, JavaScript form validation,
+                consistent navigation, image use, validation testing and reusable page design.
+            </p>
+
+            <p>
+                The website has been developed as an electronic work portfolio for AerisAg, a company
+                focused on drone mapping, GIS analysis and land management. The web design supports this theme by
+                presenting skills and examples in a consistent, professional and easy-to-navigate format.
+            </p>
+        </section>
+
+        <section class="content-box">	<!-- Web development skill cards -->
+            <h2>Web Development Capability</h2>	<!-- Section heading -->
+
+            <div class="card-grid">
+                <article class="info-card">
+                    <h3>HTML5 Structure</h3>
+                    <p>
+                        The website uses HTML5 document structure, semantic sections, headings, paragraphs, lists,
+                        links, images, tables, forms, metadata and footer content.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>External CSS</h3>
+                    <p>
+                        Styling is controlled through an external CSS file. This supports consistency, reusability
+                        and easier maintenance across all website pages.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>JavaScript Form Validation</h3>
+                    <p>
+                        JavaScript is used on the newsletter form to display a welcome message, check required
+                        fields and provide feedback after the form is completed.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Validation and Testing</h3>
+                    <p>
+                        HTML and CSS validation tools were used to check code quality. Navigation, layout,
+                        images, form behaviour and screen-size usability were also tested.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-box">	<!-- HTML skills section -->
+            <h2>HTML Skills Demonstrated</h2>	<!-- Section heading -->
+
+            <ul class="two-column-list">
+                <li>HTML5 doctype and language declaration</li>
+                <li>Metadata and viewport settings</li>
+                <li>Relevant page titles</li>
+                <li>Headings and structured content sections</li>
+                <li>Internal navigation links</li>
+                <li>External validation links</li>
+                <li>Email and telephone links</li>
+                <li>Image elements with alt text</li>
+                <li>Tables for organised information</li>
+                <li>HTML5 newsletter form controls</li>
+                <li>Comments to explain code purpose</li>
+                <li>Consistent footer content</li>
+            </ul>
+        </section>
+
+        <section class="content-box">	<!-- CSS skills section -->
+            <h2>CSS Skills Demonstrated</h2>	<!-- Section heading -->
+
+            <ul class="two-column-list">
+                <li>External CSS used as the main styling source</li>
+                <li>Universal selector added for layout consistency</li>
+                <li>Button-style navigation</li>
+                <li>Consistent colours, fonts and spacing</li>
+                <li>Content-box styling for page sections</li>
+                <li>Card-grid and info-card layouts</li>
+                <li>Image-box styling for figures and captions</li>
+                <li>Form styling for labels, inputs and buttons</li>
+                <li>Table styling</li>
+                <li>Hover effects on links and buttons</li>
+                <li>Responsive layout using media queries</li>
+                <li>Print media rules for cleaner printed output</li>
+            </ul>
+        </section>
+
+        <section class="content-box">	<!-- JavaScript and form section -->
+            <h2>JavaScript Newsletter Form</h2>	<!-- Section heading -->
+
+            <p>
+                As part of Assessment 4, I added an HTML5 newsletter signup form for AerisAg. The form opens in
+                a new browser tab from this Web Skills page and demonstrates the use of HTML5 form controls, CSS
+                form styling and JavaScript validation.
+            </p>
+
+            <p>
+                The JavaScript displays a welcome alert when the newsletter page loads. When the user submits the
+                form, JavaScript checks that the required First Name, Last Name and Email Address fields have been
+                completed. If required information is missing, an alert is displayed and the form does not submit.
+            </p>
+
+            <p>
+                When the form is completed correctly, a thank-you message is displayed and the user is returned
+                to the Web Skills page. This avoids the missing server-side processing file problem while still
+                demonstrating form validation and user feedback.
+            </p>
+
+            <a class="hero-button" href="ssmith_A4_newsletter.html" target="_blank">
+                Open AerisAg Newsletter Signup Form
+            </a>
+        </section>
+
+        <section class="content-box">	<!-- Assessment 4 improvements -->
+            <h2>Assessment 4 Improvements</h2>	<!-- Section heading -->
+
+            <ul>
+                <li>Expanded the Assessment 3 website into a larger electronic work portfolio.</li>
+                <li>Added the required four skill areas: Web Skills, Drones, GIS Mapping and Land Management.</li>
+                <li>Added a new newsletter signup form for AerisAg.</li>
+                <li>Added JavaScript to display a welcome message and validate form fields.</li>
+                <li>Made First Name, Last Name and Email Address required fields in the newsletter form.</li>
+                <li>Added a universal selector to the CSS file to meet the Assessment 4 rubric requirement.</li>
+                <li>Added reusable CSS classes for cards, figures, image boxes, forms and two-column lists.</li>
+                <li>Updated all navigation links so they work correctly across the site.</li>
+                <li>Kept the navigation menu, footer, colours and page structure consistent across all pages.</li>
+                <li>Corrected issues identified in Assessment 3 feedback, including duplicate text, spelling mistakes and accidental leftover wording.</li>
+                <li>Expanded testing to include JavaScript, form validation, screen size, navigation and validation checks.</li>
+            </ul>
+        </section>
+
+        <section class="content-box">	<!-- Validation Results section with link to validation tools and results on another webpage -->
+            <h2>External Validation Tools</h2>	<!-- Section heading -->
+
+            <p>
+                Validation testing was completed using the
+                <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a>
+                and the
+                <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a>.
+            </p>
+
+            <p>
+                The validation results page provides evidence of the HTML and CSS checks completed for the
+                Assessment 4 website.
+            </p>
+
+            <p>
+                <a href="ssmith_A4_validations.html">View the validation results</a>
+            </p>
+        </section>
+
+        <section class="content-box reflection-box">	<!-- Reflection on web development learning -->
+            <h2>Reflection</h2>	<!-- Section heading -->
+
+            <p>
+                Developing the Assessment 4 website helped me improve my understanding of how HTML, CSS and
+                JavaScript work together in a complete website. Assessment 3 focused mainly on structure and
+                styling, while Assessment 4 added more advanced requirements such as a larger site structure,
+                additional skill pages and a JavaScript newsletter form.
+            </p>
+
+            <p>
+                The most important improvements were making the website more reusable, consistent and professional.
+                I also learned the importance of testing page links, file paths, validation results and form
+                behaviour before submission.
+            </p>
+        </section>
+    </main>	<!-- End of the main page content -->
+
+    <footer> <!-- Footer contains contact details and copyright notice -->
+        <p>Contact: <a href="mailto:simon.smith21@hotmail.com">simon.smith21@hotmail.com</a> | <a href="tel:+610423964127">0423 964 127</a> | 
+        <a href="ssmith_A4_newsletter.html" target="_blank">Newsletter Signup</a></p>
+        <p>&copy; 2026 Simon Smith / AerisAg. All original content on this website is owned by the author or used with permission.</p>
+    </footer>
+	
+</body>
+</html>
